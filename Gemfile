@@ -12,6 +12,7 @@ gem 'hashdiff'
 gem 'highline'
 gem 'logger'
 gem 'nokogiri'
+gem 'rake'
 gem 'text'
 gem 'zeitwerk'
 
