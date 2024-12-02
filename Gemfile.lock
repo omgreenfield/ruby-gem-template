@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ruby-project-template (0.1.0)
+    omg-gem_template (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -80,6 +80,7 @@ GEM
       binding_of_caller (~> 1.0)
       pry (~> 0.13)
     racc (1.8.1)
+    rake (13.2.1)
     reline (0.5.9)
       io-console (~> 0.5)
     rspec (3.13.0)
@@ -137,12 +138,13 @@ DEPENDENCIES
   nokogiri
   omg-attrs
   omg-audit-group
+  omg-gem_template!
   omg-thor-ext
   pry
   pry-byebug
   pry-stack_explorer
+  rake
   rspec
-  ruby-project-template!
   text
   thor
   tty-cursor

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 module Omg
-  class RubyProjectTemplate
+  class GemTemplate
   end
 end
