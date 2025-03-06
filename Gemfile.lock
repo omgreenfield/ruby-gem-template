@@ -6,70 +6,21 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (7.1.4)
-      activesupport (= 7.1.4)
-    activerecord (7.1.4)
-      activemodel (= 7.1.4)
-      activesupport (= 7.1.4)
-      timeout (>= 0.4.0)
-    activesupport (7.1.4)
-      base64
-      bigdecimal
-      concurrent-ruby (~> 1.0, >= 1.0.2)
-      connection_pool (>= 2.2.5)
-      drb
-      i18n (>= 1.6, < 2)
-      minitest (>= 5.1)
-      mutex_m
-      tzinfo (~> 2.0)
-    amatch (0.4.1)
-      mize
-      tins (~> 1.0)
-    audited (5.7.0)
-      activerecord (>= 5.2, < 8.0)
-      activesupport (>= 5.2, < 8.0)
-    base64 (0.2.0)
-    bigdecimal (3.1.8)
+    ast (2.4.2)
     binding_of_caller (1.0.1)
       debug_inspector (>= 1.2.0)
     byebug (11.1.3)
     coderay (1.1.3)
-    concurrent-ruby (1.3.4)
-    connection_pool (2.4.1)
     debug_inspector (1.2.0)
     diff-lcs (1.5.1)
-    dotenv (3.1.2)
-    drb (2.2.1)
-    hashdiff (1.1.1)
-    highline (3.1.0)
-      reline
-    i18n (1.14.5)
-      concurrent-ruby (~> 1.0)
-    io-console (0.7.2)
-    logger (1.6.0)
+    json (2.10.1)
+    language_server-protocol (3.17.0.4)
+    lint_roller (1.1.0)
     method_source (1.1.0)
-    minitest (5.25.1)
-    mize (0.6.0)
-    mutex_m (0.2.0)
-    nokogiri (1.16.7-aarch64-linux)
-      racc (~> 1.4)
-    nokogiri (1.16.7-arm-linux)
-      racc (~> 1.4)
-    nokogiri (1.16.7-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.16.7-x86-linux)
-      racc (~> 1.4)
-    nokogiri (1.16.7-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.16.7-x86_64-linux)
-      racc (~> 1.4)
-    omg-attrs (0.1.1)
-    omg-audit-group (0.1.4)
-      activerecord (>= 5.2, < 7.2)
-      audited (>= 4.9, < 6.0)
-    omg-thor-ext (0.1.0)
-    pastel (0.8.0)
-      tty-color (~> 0.5)
+    parallel (1.26.3)
+    parser (3.3.7.1)
+      ast (~> 2.4.1)
+      racc
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -80,9 +31,9 @@ GEM
       binding_of_caller (~> 1.0)
       pry (~> 0.13)
     racc (1.8.1)
+    rainbow (3.1.1)
     rake (13.2.1)
-    reline (0.5.9)
-      io-console (~> 0.5)
+    regexp_parser (2.10.0)
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
@@ -96,29 +47,23 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-support (3.13.1)
-    sync (0.5.0)
-    text (1.3.1)
-    thor (1.3.1)
-    timeout (0.4.1)
-    tins (1.33.0)
-      bigdecimal
-      sync
-    tty-color (0.6.0)
-    tty-cursor (0.7.1)
-    tty-prompt (0.23.1)
-      pastel (~> 0.8)
-      tty-reader (~> 0.8)
-    tty-reader (0.9.0)
-      tty-cursor (~> 0.7)
-      tty-screen (~> 0.8)
-      wisper (~> 2.0)
-    tty-screen (0.8.2)
-    tty-spinner (0.9.3)
-      tty-cursor (~> 0.7)
-    tzinfo (2.0.6)
-      concurrent-ruby (~> 1.0)
-    wisper (2.0.1)
-    zeitwerk (2.6.17)
+    rubocop (1.73.1)
+      json (~> 2.3)
+      language_server-protocol (~> 3.17.0.2)
+      lint_roller (~> 1.1.0)
+      parallel (~> 1.10)
+      parser (>= 3.3.0.2)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 2.9.3, < 3.0)
+      rubocop-ast (>= 1.38.0, < 2.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 2.4.0, < 4.0)
+    rubocop-ast (1.38.1)
+      parser (>= 3.3.1.0)
+    ruby-progressbar (1.13.0)
+    unicode-display_width (3.1.4)
+      unicode-emoji (~> 4.0, >= 4.0.4)
+    unicode-emoji (4.0.4)
 
 PLATFORMS
   aarch64-linux
@@ -129,28 +74,13 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  activesupport
-  amatch
-  dotenv
-  hashdiff
-  highline
-  logger
-  nokogiri
-  omg-attrs
-  omg-audit-group
   omg-gem_template!
-  omg-thor-ext
   pry
   pry-byebug
   pry-stack_explorer
   rake
   rspec
-  text
-  thor
-  tty-cursor
-  tty-prompt
-  tty-spinner
-  zeitwerk
+  rubocop
 
 BUNDLED WITH
    2.5.17

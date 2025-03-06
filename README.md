@@ -1,17 +1,23 @@
-## Setup
+A Ruby gem template based on the template generated with `bundle gem some-gem-name`
 
-- Ensure you have Ruby `>= 2.7.0` 
+## (1) Create new repo from template
+
+```sh
+gh repo create your-name/your-new-gem-repo --public --template=omgreenfield/ruby-gem-template
+```
+
+## (2) Setup
+
+- Ensure you have Ruby `>= 3.1.0` installed
 - Run `bin/setup` to install dependencies
-- Modify `config.yml` to specify gem metadata
 
-## Development
+## (3) Development
 
 - Add code to `lib/`
 - Run `bin/console` to load your library in a `pry` session
-- Run `rake bump` to bump the version in `config.yml`
-- Run `rake specs` to run specs
+- Run `rake -T` to see available tasks
 
-## Publishing
+## (4) Publishing
 
 - Run `rake build` to build the gem
 - Run `rake push` or `rake publish` to push to RubyGems

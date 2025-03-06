@@ -1,29 +1,12 @@
-require 'yaml'
+# frozen_string_literal: true
 
-def config
-  @config ||= YAML.load_file(File.join(__dir__, './config.yml'))
-end
+require 'bundler/gem_tasks'
+require 'rspec/core/rake_task'
 
-desc 'Increments version in `config.yml`'
-task :bump do
-  versions = config['version'].split('.')
-  versions[-1] = versions[-1].to_i + 1
-  config['version'] = versions.join('.')
-  File.write(File.join(__dir__, './config.yml'), config.to_yaml)
-end
+RSpec::Core::RakeTask.new(:spec)
 
-desc 'Runs specs'
-task :spec do
-  sh 'bundle exec rspec'
-end
+require 'rubocop/rake_task'
 
-desc 'Builds gem'
-task :build do
-  sh "gem build #{config['name']}.gemspec"
-end
+RuboCop::RakeTask.new
 
-desc 'Publishes/pushes gem to RubyGems'
-task :push do
-  sh "gem push #{config['name']}-#{config['version']}.gem"
-end
-task publish: :push
+task default: %i[spec rubocop]
